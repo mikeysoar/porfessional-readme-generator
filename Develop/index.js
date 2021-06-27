@@ -1,6 +1,7 @@
+const fs = require('fs');
 const inquirer = require('inquirer');
-// const generatePage = require('./src/page-template');
-// const { writeFile, copyFile } = require('./utils/generate-site.js');
+const generateMarkdown = require('./utils/generateMarkdown');
+
 
 const promptUser = () => {
   return inquirer.prompt([
@@ -15,44 +16,46 @@ const promptUser = () => {
           console.log('Please enter your project name!');
           return false;
         }
-      }      
+      }
     },
+    // Input description
     {
-      type: 'input',
+      type: 'editor',
       name: 'description',
-      message: 'Enter a description of your project (Required)',
-      validate: descriptionInput => {
-        if (descriptionInput) {
-          return true;
-        } else {
-          console.log('Please enter a project description!');
-          return false;
-        }
-      } 
+      message: '',
+      validate(text) {
+      if(text.split('\n').length < 3) {
+        return 'Must be at least three lines.';
+      }
+
+      return true;
     },
-    {
-      type: 'confirm',
-      name: 'tableOfContents',
-      message: 'Would you like to enter a table of contents?',
-      default: true
-    },
-    {
-      type: 'input',
-      name: 'about',
-      message: 'Provide some information about yourself:',
-      when: ({ tableOfContents }) => {
-        if (tableOfContents) {
-          return true;
-        } else {
-          return false;
+  }, 
+
+// input table of contents
+{
+  type: 'confirm',
+  name: 'tableOfContents',
+  message: 'Would you like to enter a table of contents?',
+  default: true
+},
+{
+  type: 'input',
+    name: 'about',
+      message: 'Provide a table content:',
+        when: ({ tableOfContents }) => {
+          if (tableOfContents) {
+            return true;
+          } else {
+            return false;
+          }
         }
       }
-    }
-  ]);
+    ]);
 };
 
-// input project title
-// Input description
+
+
 // input table of contents
 // installation. what are the steps to install your project
 // usage
@@ -64,100 +67,18 @@ const promptUser = () => {
 // contributing
 // tests go the extra miler and write tests. . The provide an example how to run them
 
-const promptProject = portfolioData => {
-  console.log(`
-=================
-Add a New Project
-=================
-`);
-// If there's no 'projects' array property, create one
-if (!portfolioData.projects) {
-  portfolioData.projects = [];
-}
-  return inquirer.prompt([
-    {
-      type: 'input',
-      name: 'name',
-      message: 'What is the name of your project? (Required)',
-      validate: nameInput => {
-        if (nameInput) {
-          return true;
-        } else {
-          console.log('Please enter your Project name!');
-          return false;
-        }
-      }
-    },
-    {
-      type: 'input',
-      name: 'description',
-      message: 'Provide a description of the project (Required)',
-      validate: descriptionInput => {
-        if (descriptionInput) {
-          return true;
-        } else {
-          console.log('Please enter your project description!');
-          return false;
-        }
-      }
-    },
-    {
-      type: 'checkbox',
-      name: 'languages',
-      message: 'What did you build this project with? (Check all that apply)',
-      choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
-    },
-    {
-      type: 'input',
-      name: 'link',
-      message: 'Enter the GitHub link to your project. (Required)',
-      validate: linkInput => {
-        if (linkInput) {
-          return true;
-        } else {
-          console.log('Please enter your Github link!');
-          return false;
-        }
-      }
-    },
-    {
-      type: 'confirm',
-      name: 'feature',
-      message: 'Would you like to feature this project?',
-      default: false
-    },
-    {
-      type: 'confirm',
-      name: 'confirmAddProject',
-      message: 'Would you like to enter another project?',
-      default: false
-    }
-  ])
-  .then(projectData => {
-    portfolioData.projects.push(projectData);
-    if (projectData.confirmAddProject) {
-      return promptProject(portfolioData);
-    } else {
-      return portfolioData;
-    }
-  });
-};
+
 
 promptUser()
-  .then(promptProject)
-  .then(portfolioData => {
-    return generatePage(portfolioData);
+  .then( (userInput) => {
+    console.log(userInput);
+    const markDownText = generateMarkdown(userInput)
+  console.log(markDownText)
+  fs.writeFile("Readme.md", markDownText, (err) => {
+    if (err) throw err
   })
-  .then(pageHTML => {
-    return writeFile(pageHTML);
   })
-  .then(writeFileResponse => {
-    console.log(writeFileResponse);
-    return copyFile();
-  })
-  .then(copyFileResponse => {
-    console.log(copyFileResponse);
-  })
+ 
   .catch(err => {
     console.log(err);
   });
