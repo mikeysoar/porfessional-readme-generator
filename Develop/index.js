@@ -2,54 +2,54 @@ const inquirer = require('inquirer');
 // const generatePage = require('./src/page-template');
 // const { writeFile, copyFile } = require('./utils/generate-site.js');
 
-// const promptUser = () => {
-//   return inquirer.prompt([
-//     {
-//       type: 'input',
-//       name: 'name',
-//       message: 'What is your name? (Required)',
-//       validate: nameInput => {
-//         if (nameInput) {
-//           return true;
-//         } else {
-//           console.log('Please enter your name!');
-//           return false;
-//         }
-//       }      
-//     },
-//     {
-//       type: 'input',
-//       name: 'github',
-//       message: 'Enter your GitHub Username (Required)',
-//       validate: githubInput => {
-//         if (githubInput) {
-//           return true;
-//         } else {
-//           console.log('Please enter your Github Usernmae!');
-//           return false;
-//         }
-//       } 
-//     },
-//     {
-//       type: 'confirm',
-//       name: 'confirmAbout',
-//       message: 'Would you like to enter some information about yourself for an "About" section?',
-//       default: true
-//     },
-//     {
-//       type: 'input',
-//       name: 'about',
-//       message: 'Provide some information about yourself:',
-//       when: ({ confirmAbout }) => {
-//         if (confirmAbout) {
-//           return true;
-//         } else {
-//           return false;
-//         }
-//       }
-//     }
-//   ]);
-// };
+const promptUser = () => {
+  return inquirer.prompt([
+    {
+      type: 'input',
+      name: 'title',
+      message: 'What is the title of your project? (Required)',
+      validate: titleInput => {
+        if (titleInput) {
+          return true;
+        } else {
+          console.log('Please enter your project name!');
+          return false;
+        }
+      }      
+    },
+    {
+      type: 'input',
+      name: 'description',
+      message: 'Enter a description of your project (Required)',
+      validate: descriptionInput => {
+        if (descriptionInput) {
+          return true;
+        } else {
+          console.log('Please enter a project description!');
+          return false;
+        }
+      } 
+    },
+    {
+      type: 'confirm',
+      name: 'tableOfContents',
+      message: 'Would you like to enter a table of contents?',
+      default: true
+    },
+    {
+      type: 'input',
+      name: 'about',
+      message: 'Provide some information about yourself:',
+      when: ({ tableOfContents }) => {
+        if (tableOfContents) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    }
+  ]);
+};
 
 // input project title
 // Input description
