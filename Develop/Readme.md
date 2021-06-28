@@ -4,48 +4,47 @@ Red
 
 ## Description
 
-red
-red
-red
-
+this is
+so funny
+I forgot to laugh
 
 ## Table of Contents
 
-true
+Instalation
 
 ## Installation
 
-1234
+1
 
 ## Usage
 
-5
+2
 
 ## Screenshots
 
-6
+3
 
 ## Credits
 
-7
+4
 
 ## License
 
-8
+5
 
 ## Badges
 
-9
+6
 
 ## Features
 
-0
+7
 
 ## Contibuting
 
-12
+8
 
 ## Tests
 
-11
+9
 

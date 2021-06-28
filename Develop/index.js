@@ -3,6 +3,7 @@ const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 
 
+
 const promptUser = () => {
   return inquirer.prompt([
     {
@@ -34,31 +35,18 @@ const promptUser = () => {
 
   // input table of contents
 {
-  type: 'confirm',
+  type: 'list',
   name: 'tableOfContents',
-  message: 'Would you like to enter a table of contents?',
-  default: true
-},
-  // input table of contents
-{
-  type: 'input',
-  name: 'about',
-  message: 'Provide a table content:',
-      when: ({ tableOfContents }) => {
-        if (tableOfContents) {
-        return true;
-        } else {
-        return false;
-        }
-      }
+  message: 'Enter a table of contents!',
+  choices: table,
 },
 
 {
   type: 'input',
   name: 'installation',
   message: 'What are the steps required to install and run? ',
-  validate: titleInput => {
-    if (titleInput) {
+  validate: installInput => {
+    if (installInput) {
       return true;
     } else {
       console.log('Please explain how to install and run!');
@@ -71,8 +59,8 @@ const promptUser = () => {
   type: 'input',
   name: 'usage',
   message: 'How to use this project? ',
-  validate: titleInput => {
-    if (titleInput) {
+  validate: usageInput => {
+    if (usageInput) {
       return true;
     } else {
       console.log('Please enter instuctions for use and examples!');
@@ -85,8 +73,8 @@ const promptUser = () => {
   type: 'input',
   name: 'screenshots',
   message: 'Screenshots? ',
-  validate: titleInput => {
-    if (titleInput) {
+  validate: screenshotInput => {
+    if (screenshotInput) {
       return true;
     } else {
       console.log('Please enter any screenshots!');
@@ -99,8 +87,8 @@ const promptUser = () => {
   type: 'input',
   name: 'credits',
   message: 'Who ar the collaborators? ',
-  validate: titleInput => {
-    if (titleInput) {
+  validate: creditsInput => {
+    if (creditsInput) {
       return true;
     } else {
       console.log('Please enter any collaborators!');
@@ -113,8 +101,8 @@ const promptUser = () => {
   type: 'input',
   name: 'license',
   message: 'What licenses does your project have? ',
-  validate: titleInput => {
-    if (titleInput) {
+  validate: licenseInput => {
+    if (licenseInput) {
       return true;
     } else {
       console.log('Please enter any applicable licenses!');
@@ -127,8 +115,8 @@ const promptUser = () => {
   type: 'input',
   name: 'badges',
   message: 'Do you have any badges? ',
-  validate: titleInput => {
-    if (titleInput) {
+  validate: badgeInput => {
+    if (badgeInput) {
       return true;
     } else {
       console.log('Please enter a Badge!');
@@ -141,8 +129,8 @@ const promptUser = () => {
   type: 'input',
   name: 'features',
   message: 'What features does this project have? ',
-  validate: titleInput => {
-    if (titleInput) {
+  validate: featureInput => {
+    if (featureInput) {
       return true;
     } else {
       console.log('Please enter any features!');
@@ -155,8 +143,8 @@ const promptUser = () => {
   type: 'input',
   name: 'contributing',
   message: 'Guidelines, how to contribute to this project, if allowed? ',
-  validate: titleInput => {
-    if (titleInput) {
+  validate: contributingInput => {
+    if (contributingInput) {
       return true;
     } else {
       console.log('Please enter all Contributors!');
@@ -169,8 +157,8 @@ const promptUser = () => {
   type: 'input',
   name: 'tests',
   message: 'Are there tests that can be performed? ',
-  validate: titleInput => {
-    if (titleInput) {
+  validate: testInput => {
+    if (testInput) {
       return true;
     } else {
       console.log('Please enter a test!');
