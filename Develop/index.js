@@ -8,7 +8,7 @@ const promptUser = () => {
     {
       type: 'input',
       name: 'title',
-      message: 'What is the title of your project? (Required)',
+      message: 'What is the title of your project? ',
       validate: titleInput => {
         if (titleInput) {
           return true;
@@ -56,7 +56,7 @@ const promptUser = () => {
 {
   type: 'input',
   name: 'installation',
-  message: 'What are the steps required to install and run? (Required)',
+  message: 'What are the steps required to install and run? ',
   validate: titleInput => {
     if (titleInput) {
       return true;
@@ -70,7 +70,7 @@ const promptUser = () => {
 {
   type: 'input',
   name: 'usage',
-  message: 'How to use this project? (Required)',
+  message: 'How to use this project? ',
   validate: titleInput => {
     if (titleInput) {
       return true;
@@ -84,7 +84,7 @@ const promptUser = () => {
 {
   type: 'input',
   name: 'screenshots',
-  message: 'Screenshots? (Required)',
+  message: 'Screenshots? ',
   validate: titleInput => {
     if (titleInput) {
       return true;
@@ -98,7 +98,7 @@ const promptUser = () => {
 {
   type: 'input',
   name: 'credits',
-  message: 'Who ar the collaborators? (Required)',
+  message: 'Who ar the collaborators? ',
   validate: titleInput => {
     if (titleInput) {
       return true;
@@ -112,7 +112,7 @@ const promptUser = () => {
 {
   type: 'input',
   name: 'license',
-  message: 'What licenses does your project have? (Required)',
+  message: 'What licenses does your project have? ',
   validate: titleInput => {
     if (titleInput) {
       return true;
@@ -126,7 +126,7 @@ const promptUser = () => {
 {
   type: 'input',
   name: 'badges',
-  message: 'Do you have any badges? (Required)',
+  message: 'Do you have any badges? ',
   validate: titleInput => {
     if (titleInput) {
       return true;
@@ -140,7 +140,7 @@ const promptUser = () => {
 {
   type: 'input',
   name: 'features',
-  message: 'What features does this project have? (Required)',
+  message: 'What features does this project have? ',
   validate: titleInput => {
     if (titleInput) {
       return true;
@@ -154,7 +154,7 @@ const promptUser = () => {
 {
   type: 'input',
   name: 'contributing',
-  message: 'Guidelines, how to contribute to this project, if allowed? (Required)',
+  message: 'Guidelines, how to contribute to this project, if allowed? ',
   validate: titleInput => {
     if (titleInput) {
       return true;
@@ -168,7 +168,7 @@ const promptUser = () => {
 {
   type: 'input',
   name: 'tests',
-  message: 'Are there tests that can be performed? (Required)',
+  message: 'Are there tests that can be performed? ',
   validate: titleInput => {
     if (titleInput) {
       return true;
@@ -181,21 +181,6 @@ const promptUser = () => {
 
   ]);
 };
-
-
-
-
-// installation. what are the steps to install your project
-// usage
-// credits list of collaberators
-//  License lets others know what they can and can't do with your 
-// project
-// badges?
-// features
-// contributing
-// tests go the extra miler and write tests. . The provide an example how to run them
-
-
 
 promptUser()
   .then( (userInput) => {
