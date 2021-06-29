@@ -35,10 +35,10 @@ const promptUser = () => {
 
   // input table of contents
 {
-  type: 'list',
+  type: 'editor',
   name: 'tableOfContents',
   message: 'Enter a table of contents!',
-  choices: table,
+  // choices: ['apple', 'blueberry', 'orange' ]
 },
 
 {
@@ -112,7 +112,7 @@ const promptUser = () => {
 },
 
 {
-  type: 'input',
+  type: 'editor',
   name: 'badges',
   message: 'Do you have any badges? ',
   validate: badgeInput => {
