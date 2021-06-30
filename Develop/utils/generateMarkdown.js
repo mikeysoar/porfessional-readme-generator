@@ -18,13 +18,23 @@ function generateMarkdown(data) {
   
 ${data.title}
 
+## Table of Contents
+${data.tableOfContents}
+[Title](#Title)
+[Description](#Description)
+[Installation](#Installation)
+[Usage](#Usage)
+[Screenshots](#Screenshots)
+[Credits](#Credits)
+[License](#License)
+[Badges](#Badges)
+[Features](#Features)
+[Contributing](#Contributing)
+[Tests](#Tests)
+
 ## Description
 
 ${data.description}
-
-## Table of Contents
-
-${data.tableOfContents}
 
 ## Installation
 
@@ -37,6 +47,7 @@ ${data.usage}
 ## Screenshots
 
 ${data.screenshots}
+![alt text](assets/images/screenshot.png)
 
 ## Credits
 
