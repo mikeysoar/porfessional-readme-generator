@@ -2,8 +2,6 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-
-
 const promptUser = () => {
   return inquirer.prompt([
     {
@@ -76,28 +74,15 @@ const promptUser = () => {
     },
 
     {
-      type: 'input',
+      type: 'list',
       name: 'license',
       message: 'What licenses does your project have? ',
+      choices: ['MIT', 'GPL', 'none'],
       validate: licenseInput => {
         if (licenseInput) {
           return true;
         } else {
           console.log('Please enter any applicable licenses!');
-          return false;
-        }
-      }
-    },
-
-    {
-      type: 'editor',
-      name: 'badges',
-      message: 'Do you have any badges? ',
-      validate: badgeInput => {
-        if (badgeInput) {
-          return true;
-        } else {
-          console.log('Please enter a Badge!');
           return false;
         }
       }
@@ -153,7 +138,7 @@ promptUser()
     console.log(userInput);
     const markDownText = generateMarkdown(userInput)
     console.log(markDownText)
-    fs.writeFile("Readme.md", markDownText, (err) => {
+    fs.writeFile("./output/Readme.md", markDownText, (err) => {
       if (err) throw err
     })
   })

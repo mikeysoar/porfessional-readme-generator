@@ -19,18 +19,28 @@ function generateMarkdown(data) {
 ${data.title}
 
 ## Table of Contents
-${data.tableOfContents}
-[Title](#Title)
-[Description](#Description)
-[Installation](#Installation)
-[Usage](#Usage)
-[Screenshots](#Screenshots)
-[Credits](#Credits)
-[License](#License)
-[Badges](#Badges)
-[Features](#Features)
-[Contributing](#Contributing)
-[Tests](#Tests)
+
+[Title](#title)
+
+[Description](#description)
+
+[Installation](#installation)
+
+[Usage](#usage)
+
+[Screenshots](#screenshots)
+
+[Credits](#credits)
+
+[License](#license)
+
+[Badges](#badges)
+
+[Features](#features)
+
+[Contributing](#contributing)
+
+[Tests](#tests)
 
 ## Description
 
@@ -55,11 +65,11 @@ ${data.credits}
 
 ## License
 
-${data. license}
+${data.license}
 
 ## Badges
 
-${data.badges}
+![badge](https://img.shields.io/static/v1?label=License&message=${data.license}&color=blue)
 
 ## Features
 
