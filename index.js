@@ -32,7 +32,7 @@ const promptUser = () => {
     },
 
     {
-      type: 'input',
+      type: 'editor',
       name: 'installation',
       message: 'What are the steps required to install and run? ',
       validate: installInput => {
