@@ -55,9 +55,9 @@ Follow the promts on the command line to create content for the Readme file asso
 
 ## Screenshots
 
-![screenshot_1](assets/images/screenshot1.png)
-![screenshot_2](assets/images/screenshot2.png)
-![screenshot_3](assets/images/screenshot3.png)
+![screenshot_1](../assets/images/screenshot1.png)
+![screenshot_2](../assets/images/screenshot2.png)
+![screenshot_3](../assets/images/screenshot3.png)
 
 
 ## Credits
