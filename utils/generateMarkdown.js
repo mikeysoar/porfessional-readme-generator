@@ -78,7 +78,7 @@ ${data.license}
 
 ${data.features}
 
-## Contibuting
+## Contributing
 
 ${data.contributing}
 
