@@ -2,15 +2,6 @@
   
 Professional Readme Generator
 
-## Description
-
-This Professional Readme generator is bulit to assist in 
-creating a standard for a Readmefile when used with a github
-project. This identifies the title of the project, it provides a 
-place to enter the description of the project. Included in this
-readme file are places for the use to identify a license and badges.
-
-
 ## Table of Contents
 
 [Title](#title)
@@ -35,7 +26,14 @@ readme file are places for the use to identify a license and badges.
 
 [Tests](#tests)
 
-[Title](#Title)
+## Description
+
+This Professional Readme generator is bulit to assist in 
+creating a standard for a Readmefile when used with a github
+project. This identifies the title of the project, it provides a 
+place to enter the description of the project. Included in this
+readme file are places for the use to identify a license and badges.
+
 
 ## Installation
 
@@ -55,22 +53,23 @@ Follow the promts on the command line to create content for the Readme file asso
 
 ## Screenshots
 
+undefined
+
 ![screenshot_1](../assets/images/screenshot1.png)
 ![screenshot_2](../assets/images/screenshot2.png)
 ![screenshot_3](../assets/images/screenshot3.png)
 
-
 ## Credits
 
-MIchael Warner
+Michael Warner
 
 ## License
 
-
+MIT
 
 ## Badges
 
-![badge](https://img.shields.io/static/v1?label=License&message=${data.license}&color=blue)
+![badge](https://img.shields.io/static/v1?label=License&message=MIT&color=blue)
 
 ## Features
 
