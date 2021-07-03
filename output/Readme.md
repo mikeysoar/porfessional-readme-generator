@@ -1,6 +1,6 @@
 # Title
   
-Professional ReadMe Generator
+Professional Readme Generator
 
 ## Table of Contents
 
@@ -55,9 +55,9 @@ Follow the promts on the command line to create content for the Readme file asso
 
 undefined
 
-![screenshot_1](assets/images/screenshot1.png)
-![screenshot_2](assets/images/screenshot2.png)
-![screenshot_3](assets/images/screenshot3.png)
+![screenshot_1](../assets/images/screenshot1.png)
+![screenshot_2](../assets/images/screenshot2.png)
+![screenshot_3](../assets/images/screenshot3.png)
 
 ## Credits
 
@@ -77,9 +77,9 @@ The following features are includedin this application: a table of content that 
 
 ## Contibuting
 
-Contubutions are limited at this time
+Contubutions are limited at this time.
 
 ## Tests
 
-no
+No
 

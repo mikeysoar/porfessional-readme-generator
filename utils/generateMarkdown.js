@@ -58,9 +58,9 @@ ${data.usage}
 
 ${data.screenshots}
 
-![screenshot_1](assets/images/screenshot1.png)
-![screenshot_2](assets/images/screenshot2.png)
-![screenshot_3](assets/images/screenshot3.png)
+![screenshot_1](../assets/images/screenshot1.png)
+![screenshot_2](../assets/images/screenshot2.png)
+![screenshot_3](../assets/images/screenshot3.png)
 
 ## Credits
 
