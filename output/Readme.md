@@ -1,6 +1,6 @@
 # Title
   
-Professional Readme Generator
+red
 
 ## Table of Contents
 
@@ -28,28 +28,18 @@ Professional Readme Generator
 
 ## Description
 
-This Professional Readme generator is bulit to assist in 
-creating a standard for a Readmefile when used with a github
-project. This identifies the title of the project, it provides a 
-place to enter the description of the project. Included in this
-readme file are places for the use to identify a license and badges.
+this
+is
+a test
 
 
 ## Installation
 
-This Readme file will need to be downloaded to the computer proir to running.
-Using a code editor program you need to open a terminal window and access the
-root directory where the application is located. using the termianl input
-run the following commands:
-node install
-node index.
-
-The application should run at this point, follow the instructions on the 
-comand line to input the contents of the Readme file. 
+hahahaha
 
 ## Usage
 
-Follow the promts on the command line to create content for the Readme file associated with your project.
+yes
 
 ## Screenshots
 
@@ -73,13 +63,21 @@ MIT
 
 ## Features
 
-The following features are includedin this application: a table of content that directs the use to each section. A place to identify a license and a badge used and a place to add screen shoots.
+yes
 
-## Contibuting
+## Contributing
 
-Contubutions are limited at this time.
+no
 
 ## Tests
 
-No
+no
+
+## Useful links
+
+Youtube: https://www.youtube.com/watch?v=5iBBdmvz13M&list=PLwF4yLpW3aieHvr6ETY4jJRjL2tkj3bJC 
+
+Github link: https://github.com/mikeysoar/professional-readme-generator
+
+User Email: mwclimb@gmail.com
 

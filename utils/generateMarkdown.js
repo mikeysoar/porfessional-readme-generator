@@ -86,6 +86,14 @@ ${data.contributing}
 
 ${data.tests}
 
+## Useful links
+
+Youtube: https://www.youtube.com/watch?v=5iBBdmvz13M&list=PLwF4yLpW3aieHvr6ETY4jJRjL2tkj3bJC 
+
+Github link: https://github.com/mikeysoar/professional-readme-generator
+
+User Email: mwclimb@gmail.com
+
 `;
 }
 
