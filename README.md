@@ -53,11 +53,10 @@ Follow the promts on the command line to create content for the Readme file asso
 
 ## Screenshots
 
-undefined
+![screenshot1](https://user-images.githubusercontent.com/81787981/124645548-cfccfd80-de50-11eb-81f9-b488e7dad7ca.PNG)
+![screenshot2](https://user-images.githubusercontent.com/81787981/124645565-d491b180-de50-11eb-8d0a-c41dfda28350.PNG)
+![screenshot3](https://user-images.githubusercontent.com/81787981/124645586-d9566580-de50-11eb-8344-30d4ede44fc5.PNG)
 
-![screenshot_1](../assets/images/screenshot1.png)
-![screenshot_2](../assets/images/screenshot2.png)
-![screenshot_3](../assets/images/screenshot3.png)
 
 ## Credits
 
